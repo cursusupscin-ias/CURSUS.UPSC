@@ -27,13 +27,29 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 .modal{position:fixed;inset:0;background:rgba(11,13,15,.72);display:none;z-index:50;padding:30px}.modal.open{display:flex;align-items:center;justify-content:center}.modalbox{width:min(1100px,100%);height:min(88vh,900px);background:var(--paper);display:flex;flex-direction:column}.modalhead{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.modaltitle{font-weight:700;font-size:14px}.close{border:1px solid var(--line);background:transparent;width:34px;height:34px;cursor:pointer}.viewer{background:#333;flex:1;min-height:0}.viewer iframe{width:100%;height:100%;border:0}.modalnote{font-size:11px;color:var(--muted);padding:9px 15px;border-top:1px solid var(--line)}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks span{display:none}.herogrid{grid-template-columns:1fr}.herovisual{order:-1;margin-bottom:-20px}.herovisual img{width:180px}}
 @media(max-width:560px){.container{width:min(100% - 24px,1180px)}.herogrid{padding:52px 0 42px}h1{font-size:38px}.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.footerin{display:block;text-align:left}.footernote{margin-top:20px}.modal{padding:10px}.herostats{flex-wrap:wrap;gap:20px}}
+
+/* CURSUS UPSC — featured History Timelines */
+.history-timelines{padding-top:30px;padding-bottom:12px}
+.history-timelines .sectionhead{margin-bottom:8px}
+.history-intro{max-width:760px;color:var(--muted);font-size:14px;line-height:1.75;margin:0 0 22px}
+.history-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:28px}
+.history-card{display:flex;flex-direction:column;align-items:flex-start;min-height:245px;padding:24px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);transition:box-shadow .2s ease,transform .2s ease}
+.history-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.history-period{font-size:9px;font-weight:800;letter-spacing:.15em;color:var(--gold-deep);margin-bottom:13px}
+.history-card h3{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.2;margin:0 0 10px}
+.history-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+.history-card a{margin-top:auto;display:inline-flex;align-items:center;gap:14px;background:var(--black);color:var(--paper);padding:12px 15px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.history-card a:hover{background:var(--gold-deep)}
+@media(max-width:850px){.history-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.history-grid{grid-template-columns:1fr}.history-card{min-height:0}.navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end}.navin{height:auto;min-height:80px;padding:12px 0;gap:12px}}
+
 </style>
 </head>
 <body>
 <div class="topbar"></div>
 <nav><div class="container navin">
 <a class="brand" href="#"><img class="logo" id="navLogo" alt="CURSUS UPSC logo"><div><div class="brandtext">CURSUS UPSC</div><div class="brandsub">READ • REVISE • REMEMBER</div></div></a>
-<div class="navlinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div>
+<div class="navlinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#history-timelines">History Timelines</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div>
 </div></nav>
 <main>
 <section class="hero"><div class="container herogrid">
@@ -79,6 +95,35 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
   </div>
 
 </div></section>
+
+
+<section class="container history-timelines" id="history-timelines">
+  <div class="sectionhead">
+    <h2>History Timelines</h2>
+    <div class="count">CURSUS HISTORY SERIES</div>
+  </div>
+  <p class="history-intro">Explore India's past period by period. Open a timeline for an interactive journey through key events, developments and revision connections.</p>
+  <div class="history-grid">
+    <article class="history-card">
+      <div class="history-period">01 · ANCIENT INDIA</div>
+      <h3>Ancient India Timeline</h3>
+      <p>Explore the foundations, cultures, states and developments of Ancient India.</p>
+      <a href="ancient-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="history-card">
+      <div class="history-period">02 · MEDIEVAL INDIA</div>
+      <h3>Medieval India Timeline</h3>
+      <p>Navigate major dynasties, political transitions, society and cultural developments.</p>
+      <a href="medieval-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="history-card">
+      <div class="history-period">03 · MODERN INDIA</div>
+      <h3>Modern India Timeline</h3>
+      <p>Trace colonial expansion, resistance, national movement and the road to independence.</p>
+      <a href="modern-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+    </article>
+  </div>
+</section>
 
 <section class="container controls" id="library"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" type="search" placeholder="Search resources, subjects, topics..."></div><div class="filters" id="filters"></div></section>
 <section class="container"><div class="sectionhead"><h2>Resources</h2><div class="count" id="count"></div></div><div class="grid" id="grid"></div><div class="empty" id="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v6h6"/></svg><p>No resources available right now. Check back soon.</p></div></section>
