@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CURSUS UPSC — Resource Library</title>
-<meta name="description" content="CURSUS UPSC Resource Library — READ • REVISE • REMEMBER">
+<title>CURSUS UPSC â€” Resource Library</title>
+<meta name="description" content="CURSUS UPSC Resource Library â€” READ â€¢ REVISE â€¢ REMEMBER">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks span{display:none}.herogrid{grid-template-columns:1fr}.herovisual{order:-1;margin-bottom:-20px}.herovisual img{width:180px}}
 @media(max-width:560px){.container{width:min(100% - 24px,1180px)}.herogrid{padding:52px 0 42px}h1{font-size:38px}.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.footerin{display:block;text-align:left}.footernote{margin-top:20px}.modal{padding:10px}.herostats{flex-wrap:wrap;gap:20px}}
 
-/* CURSUS UPSC — featured History Timelines */
+/* CURSUS UPSC â€” featured History Timelines */
 .history-timelines{padding-top:30px;padding-bottom:12px}
 .history-timelines .sectionhead{margin-bottom:8px}
 .history-intro{max-width:760px;color:var(--muted);font-size:14px;line-height:1.75;margin:0 0 22px}
@@ -48,26 +48,26 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 <body>
 <div class="topbar"></div>
 <nav><div class="container navin">
-<a class="brand" href="#"><img class="logo" id="navLogo" alt="CURSUS UPSC logo"><div><div class="brandtext">CURSUS UPSC</div><div class="brandsub">READ • REVISE • REMEMBER</div></div></a>
-<div class="navlinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#history-timelines">History Timelines</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div>
+<a class="brand" href="#"><img class="logo" id="navLogo" alt="CURSUS UPSC logo"><div><div class="brandtext">CURSUS UPSC</div><div class="brandsub">READ â€¢ REVISE â€¢ REMEMBER</div></div></a>
+<div class="navlinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#history-timelines">History Timelines</a><a href="tracker/" target="_blank" rel="noopener">Preparation Tracker</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div>
 </div></nav>
 <main>
 <section class="hero"><div class="container herogrid">
   <div>
     <div class="kicker">Cursus Resource Library</div>
     <h1>Study with a clearer map.</h1>
-    <p>A growing collection of carefully structured resources for UPSC CSE — built to help you understand, revise and remember what matters.</p>
+    <p>A growing collection of carefully structured resources for UPSC CSE â€” built to help you understand, revise and remember what matters.</p>
     <div class="herostats" id="heroStats"></div>
   </div>
   <div class="herovisual"><img src="assets/logo-icon.png" alt="" aria-hidden="true"></div>
 
   <!-- PUBLISHER PANEL -->
   <div class="publisher-panel" id="publisherPanel" style="grid-column:1/-1">
-    <h3>Publisher Station — Add New Resource</h3>
+    <h3>Publisher Station â€” Add New Resource</h3>
     <form id="uploadForm">
       <div class="form-grid">
         <div class="form-group"><label>Resource Title</label><input type="text" id="pTitle" placeholder="e.g. INDIAN ECONOMY MODULE 1" required></div>
-        <div class="form-group"><label>Subtitle / Tagline</label><input type="text" id="pSubtitle" placeholder="e.g. CURSUS Foundation Series · Economy" required></div>
+        <div class="form-group"><label>Subtitle / Tagline</label><input type="text" id="pSubtitle" placeholder="e.g. CURSUS Foundation Series Â· Economy" required></div>
         <div class="form-group"><label>Category</label><input type="text" id="pCategory" placeholder="e.g. Economy" required></div>
         <div class="form-group"><label>Page Count</label><input type="text" id="pPages" placeholder="e.g. 54 pages" required></div>
         <div class="form-group"><label>PDF File (upload)</label><input type="file" id="pFile" accept="application/pdf" required></div>
@@ -82,7 +82,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
     </form>
     <div class="analytics-panel" style="margin-top:28px;padding-top:22px;border-top:1px solid var(--line)">
       <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap"><div><h3 style="margin:0 0 5px">Resource Analytics</h3><p style="margin:0;color:var(--muted);font-size:13px">Tracking begins after you deploy this update. Views mean preview opens; downloads mean successful download starts.</p></div><button type="button" class="btn" id="refreshAnalyticsBtn">Refresh analytics</button></div>
-      <div id="analyticsStatus" role="status" style="font-size:13px;color:var(--muted);margin:12px 0">Analytics setup required — run the supplied SQL once in Supabase.</div>
+      <div id="analyticsStatus" role="status" style="font-size:13px;color:var(--muted);margin:12px 0">Analytics setup required â€” run the supplied SQL once in Supabase.</div>
       <div id="analyticsSummary" class="herostats" style="margin:16px 0"></div>
       <div id="analyticsTableWrap" style="overflow-x:auto"></div>
       <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-top:12px">Unique visitors are approximate browser IDs, not verified people. Repeat visits from another browser/device count separately. Download counts cannot prove that a file was kept or opened.</p>
@@ -94,7 +94,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
     <h3>Publisher Login</h3>
     <div class="form-grid">
       <div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com"></div>
-      <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="••••••••"></div>
+      <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"></div>
     </div>
     <div class="admin-actions">
       <button type="button" class="btn primary" style="padding:12px 24px;" id="loginBtn">Log in</button>
@@ -104,7 +104,21 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 </div></section>
 
 
-<section class="container history-timelines" id="history-timelines">
+<section class="container history-timelines" id="preparation-tracker">
+  <div class="sectionhead">
+    <h2>UPSC Preparation Tracker</h2>
+    <div class="count">PLAN · TRACK · PROGRESS</div>
+  </div>
+  <p class="history-intro">Keep your UPSC preparation organised with the CURSUS UPSC Preparation Tracker.</p>
+  <div class="history-grid">
+    <article class="history-card">
+      <div class="history-period">YOUR PREPARATION WORKSPACE</div>
+      <h3>Preparation Tracker</h3>
+      <p>Open your syllabus tracker and continue organising your preparation.</p>
+      <a href="tracker/" target="_blank" rel="noopener">Open tracker <span aria-hidden="true">↗</span></a>
+    </article>
+  </div>
+</section><section class="container history-timelines" id="history-timelines">
   <div class="sectionhead">
     <h2>History Timelines</h2>
     <div class="count">CURSUS HISTORY SERIES</div>
@@ -112,22 +126,22 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
   <p class="history-intro">Explore India's past period by period. Open a timeline for an interactive journey through key events, developments and revision connections.</p>
   <div class="history-grid">
     <article class="history-card">
-      <div class="history-period">01 · ANCIENT INDIA</div>
+      <div class="history-period">01 Â· ANCIENT INDIA</div>
       <h3>Ancient India Timeline</h3>
       <p>Explore the foundations, cultures, states and developments of Ancient India.</p>
-      <a href="ancient-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+      <a href="ancient-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
     </article>
     <article class="history-card">
-      <div class="history-period">02 · MEDIEVAL INDIA</div>
+      <div class="history-period">02 Â· MEDIEVAL INDIA</div>
       <h3>Medieval India Timeline</h3>
       <p>Navigate major dynasties, political transitions, society and cultural developments.</p>
-      <a href="medieval-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+      <a href="medieval-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
     </article>
     <article class="history-card">
-      <div class="history-period">03 · MODERN INDIA</div>
+      <div class="history-period">03 Â· MODERN INDIA</div>
       <h3>Modern India Timeline</h3>
       <p>Trace colonial expansion, resistance, national movement and the road to independence.</p>
-      <a href="modern-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
+      <a href="modern-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
     </article>
   </div>
 </section>
@@ -136,14 +150,14 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 <section class="container"><div class="sectionhead"><h2>Resources</h2><div class="count" id="count"></div></div><div class="grid" id="grid"></div><div class="empty" id="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v6h6"/></svg><p>No resources available right now. Check back soon.</p></div></section>
 <section class="container" id="about" style="padding:0 0 80px"><div style="border-top:1px solid var(--line);padding-top:25px;max-width:700px"><div class="kicker">ABOUT CURSUS</div><p style="font-size:15px;line-height:1.7;color:var(--muted)">CURSUS UPSC creates focused educational resources designed around clarity, retention and UPSC relevance.</p></div></section>
 </main>
-<footer><div class="container footerin"><div><img src="assets/logo-full-dark.png" alt="CURSUS UPSC" style="height:64px;width:auto;margin-bottom:10px"><div class="footerline">READ • REVISE • REMEMBER</div></div><div class="footernote">CURSUS Resource Library<br>Educational resources for UPSC CSE aspirants.</div></div></footer>
-<div class="modal" id="modal" aria-hidden="true"><div class="modalbox"><div class="modalhead"><div class="modaltitle" id="modalTitle">Preview</div><button class="close" id="close">×</button></div><div class="viewer"><iframe id="pdfFrame" title="PDF preview"></iframe></div><div class="modalnote">If preview fails, use the Download button.</div></div></div>
+<footer><div class="container footerin"><div><img src="assets/logo-full-dark.png" alt="CURSUS UPSC" style="height:64px;width:auto;margin-bottom:10px"><div class="footerline">READ â€¢ REVISE â€¢ REMEMBER</div></div><div class="footernote">CURSUS Resource Library<br>Educational resources for UPSC CSE aspirants.</div></div></footer>
+<div class="modal" id="modal" aria-hidden="true"><div class="modalbox"><div class="modalhead"><div class="modaltitle" id="modalTitle">Preview</div><button class="close" id="close">Ã—</button></div><div class="viewer"><iframe id="pdfFrame" title="PDF preview"></iframe></div><div class="modalnote">If preview fails, use the Download button.</div></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const LOGO="./logo-icon.png";
 
-// ==== FILL THESE IN — see setup guide ====
+// ==== FILL THESE IN â€” see setup guide ====
 const SUPABASE_URL = "https://pevpegdeqmbrmikixfdu.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_EzBxC_Oru8lXtSDhowSypA_9X54HIb-";
 const BUCKET = "resources";
@@ -294,7 +308,7 @@ document.getElementById("uploadForm").onsubmit = async (e) => {
   const file = document.getElementById("pFile").files[0];
   if(!file){ alert("Choose a PDF file first."); return; }
 
-  btn.disabled = true; btn.textContent = "Uploading…";
+  btn.disabled = true; btn.textContent = "Uploadingâ€¦";
   try {
     const path = `${Date.now()}_${file.name.replace(/[^a-zA-Z0-9._-]/g,"_")}`;
     const {error: upErr} = await sb.storage.from(BUCKET).upload(path, file);
@@ -336,7 +350,7 @@ document.getElementById("clearAllBtn").onclick = async () => {
 async function downloadFile(url, filename, triggerEl){
   const label = triggerEl ? triggerEl.querySelector(".dl-label") : null;
   const originalText = label ? label.textContent : null;
-  if(label) label.textContent = "Preparing…";
+  if(label) label.textContent = "Preparingâ€¦";
   try{
     const res = await fetch(url);
     if(!res.ok) throw new Error("File not reachable");
@@ -363,7 +377,7 @@ async function downloadFile(url, filename, triggerEl){
 async function loadAnalytics(){
   const status=document.getElementById("analyticsStatus"),summary=document.getElementById("analyticsSummary"),wrap=document.getElementById("analyticsTableWrap");
   if(!session){status.textContent="Log in with the publisher account to view analytics.";summary.innerHTML="";wrap.innerHTML="";return;}
-  status.textContent="Loading analytics…";
+  status.textContent="Loading analyticsâ€¦";
   try{
     const {data,error}=await sb.from("resource_events").select("event_type,resource_id,resource_title,visitor_id,created_at").order("created_at",{ascending:false}).limit(20000);
     if(error) throw error;
@@ -374,7 +388,7 @@ async function loadAnalytics(){
     const byResource=new Map();for(const e of events){const k=String(e.resource_id);if(!byResource.has(k))byResource.set(k,{title:e.resource_title||"Untitled resource",views:0,downloads:0,last:e.created_at});const x=byResource.get(k);if(e.event_type==="view")x.views++;if(e.event_type==="download")x.downloads++;if(new Date(e.created_at)>new Date(x.last))x.last=e.created_at;}
     const rows=[...byResource.values()].sort((a,b)=>(b.views+b.downloads)-(a.views+a.downloads));
     wrap.innerHTML=rows.length?`<table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">Resource</th><th style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">Views</th><th style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">Downloads</th><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">Last activity</th></tr></thead><tbody>${rows.map(r=>`<tr><td style="padding:10px;border-bottom:1px solid var(--line)">${esc(r.title)}</td><td style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">${r.views}</td><td style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">${r.downloads}</td><td style="padding:10px;border-bottom:1px solid var(--line)">${new Date(r.last).toLocaleDateString()}</td></tr>`).join("")}</tbody></table>`:`<p style="color:var(--muted);font-size:13px">No tracked activity yet. New preview opens and successful download starts will appear here.</p>`;
-    status.textContent=`Analytics loaded • ${events.length.toLocaleString()} events${events.length===20000?" (latest 20,000 shown)":""}.`;
+    status.textContent=`Analytics loaded â€¢ ${events.length.toLocaleString()} events${events.length===20000?" (latest 20,000 shown)":""}.`;
   }catch(err){status.textContent="Analytics could not load. Run the companion SQL in Supabase and check its RLS policies. Details: "+(err.message||err);summary.innerHTML="";wrap.innerHTML="";}
 }
 document.getElementById("refreshAnalyticsBtn").onclick=loadAnalytics;
@@ -389,3 +403,4 @@ refreshSession();
 loadResources();
 </script>
 </body></html>
+
