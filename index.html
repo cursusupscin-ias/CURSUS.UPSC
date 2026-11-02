@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CURSUS UPSC ” Resource Library</title>
-<meta name="description" content="CURSUS UPSC Resource Library ” READ ¢ REVISE ¢ REMEMBER">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B0D0F">
+<title>CURSUS UPSC — Resource Library</title>
+<meta name="description" content="CURSUS UPSC Resource Library — READ · REVISE · REMEMBER">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks span{display:none}.herogrid{grid-template-columns:1fr}.herovisual{order:-1;margin-bottom:-20px}.herovisual img{width:180px}}
 @media(max-width:560px){.container{width:min(100% - 24px,1180px)}.herogrid{padding:52px 0 42px}h1{font-size:38px}.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.footerin{display:block;text-align:left}.footernote{margin-top:20px}.modal{padding:10px}.herostats{flex-wrap:wrap;gap:20px}}
 
-/* CURSUS UPSC ” featured History Timelines */
+/* CURSUS UPSC — featured History Timelines */
 .history-timelines{padding-top:30px;padding-bottom:12px}
 .history-timelines .sectionhead{margin-bottom:8px}
 .history-intro{max-width:760px;color:var(--muted);font-size:14px;line-height:1.75;margin:0 0 22px}
@@ -43,27 +44,141 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
 @media(max-width:850px){.history-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.history-grid{grid-template-columns:1fr}.history-card{min-height:0}.navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end}.navin{height:auto;min-height:80px;padding:12px 0;gap:12px}}
 
+
+/* ===== CURSUS UI/UX UPGRADE ===== */
+:root{--shadow:0 24px 60px -28px rgba(0,0,0,.35);--r:20px;--ease:cubic-bezier(.2,.7,.2,1)}
+html.t *,html.t *::before,html.t *::after{transition:background-color .45s,color .45s,border-color .45s,box-shadow .45s!important}
+body{background:var(--paper);color:var(--black);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.topbar{display:none}
+nav{background:color-mix(in srgb,var(--paper) 76%,transparent);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px)}
+nav .container{position:relative}.navin{height:72px}
+.navlinks{gap:24px}.navlinks a{color:var(--muted);transition:color .2s}.navlinks a:hover{color:var(--black)}
+.navlinks a:not(.x)::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}.navlinks a:hover::after{transform:scaleX(1)}
+.brandtext{font-size:18px}.brandsub{color:var(--gold-deep)}
+.secret-trigger,.filter,.close,.iconbtn{border-radius:980px;color:var(--black);transition:all .25s var(--ease)}
+.secret-trigger{padding:9px 16px}.secret-trigger:hover{background:var(--gold);color:#0B0D0F;border-color:var(--gold)}
+.iconbtn{width:38px;height:38px;border:1px solid var(--line);background:transparent;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}.iconbtn:hover{border-color:var(--gold);color:var(--gold-deep)}
+.navtoggle{display:none}
+.themepanel{position:absolute;right:0;top:calc(100% + 8px);width:300px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:all .3s var(--ease);z-index:30}
+.themepanel.open{opacity:1;visibility:visible;transform:none}
+.themepanel h4{margin:0 0 12px;font-size:12px;color:var(--muted);font-weight:600}
+.themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.themeopt{display:flex;align-items:center;gap:9px;padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--black);cursor:pointer;font-size:12px;font-weight:500;text-align:left;transition:all .2s}
+.themeopt:hover{border-color:var(--gold)}.themeopt[aria-pressed=true]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.sw{width:22px;height:22px;border-radius:50%;flex:none;border:1px solid rgba(128,128,128,.35)}
+.modes{display:flex;gap:4px;margin-top:12px;padding:4px;background:color-mix(in srgb,var(--black) 7%,transparent);border-radius:980px}
+.modes button{flex:1;border:0;background:transparent;color:var(--muted);padding:8px;border-radius:980px;cursor:pointer;font-size:12px;font-weight:600;transition:all .25s}
+.modes button[aria-pressed=true]{background:var(--white);color:var(--black);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.hero{border:0;background:radial-gradient(70% 90% at 88% 0,color-mix(in srgb,var(--gold) 20%,transparent),transparent 70%)}
+.herogrid{padding:112px 0 80px}
+h1{font-size:clamp(46px,6.6vw,88px);line-height:1;letter-spacing:-.035em;max-width:760px}
+.hero p{font-size:19px;color:var(--muted);max-width:560px}
+.kicker{color:var(--gold-deep)}
+.herovisual img{opacity:1;filter:drop-shadow(0 30px 50px color-mix(in srgb,var(--gold) 35%,transparent));animation:float 8s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+.herostats div{border-left:2px solid var(--gold)}.herostats span{color:var(--muted)}
+.publisher-panel,.card,.history-card,.search,.modalbox,.themepanel{border-radius:var(--r)}
+.publisher-panel{border-top-width:1px;box-shadow:var(--shadow);animation:pop .4s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+.form-group label{color:var(--muted)}
+.form-group input,.form-group textarea{border-radius:12px;background:var(--paper);color:var(--black);transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group textarea:focus{box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+.controls{padding-top:44px}
+.search{height:62px;background:var(--white);box-shadow:var(--shadow)}.search input{color:var(--black)}.search:focus-within{box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent),var(--shadow)}
+.filter{background:transparent}.filter.active,.filter:hover{background:var(--gold);border-color:var(--gold);color:#0B0D0F}
+.sectionhead h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.025em}
+.count{color:var(--muted)}
+.card,.history-card{background:var(--white);transition:transform .35s var(--ease),box-shadow .35s,border-color .3s}
+.card{border-radius:var(--r)}.card:hover,.history-card:hover{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.history-card{border-top:1px solid var(--line)}
+.tag{border-radius:980px;border-color:color-mix(in srgb,var(--gold) 50%,transparent);color:var(--gold-deep)}
+.meta span{background:color-mix(in srgb,var(--black) 7%,transparent);color:var(--muted);border-radius:980px}
+.btn{transition:opacity .2s,background-color .25s,color .25s;color:var(--black)}.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--black);color:var(--paper)}.btn.primary:hover{background:var(--gold);color:#0B0D0F;opacity:1}
+.btn:disabled{opacity:.55;cursor:progress}
+.history-card a{border-radius:980px;background:var(--black);color:var(--paper);transition:all .25s}.history-card a:hover{background:var(--gold);color:#0B0D0F}
+.history-period{color:var(--gold-deep)}
+.card-delete{border-radius:50%;background:var(--white);color:var(--muted)}
+.empty svg{color:var(--muted)}
+.sk{min-height:320px;border-radius:var(--r);background:linear-gradient(100deg,var(--white) 30%,color-mix(in srgb,var(--gold) 14%,var(--white)) 50%,var(--white) 70%);background-size:250% 100%;animation:sh 1.5s linear infinite;border:1px solid var(--line)}
+@keyframes sh{to{background-position:-150% 0}}
+.analytics-panel table{color:var(--black)}
+#about{padding-bottom:110px!important}#about p{font-size:18px!important;font-family:var(--serif)}
+footer{background:#0B0D0F;color:#F8F8F5;border-top:1px solid #C9A227}.footerline{color:#C9A227}.footernote{color:#a9adb2}
+.modal{background:rgba(5,6,7,.78);backdrop-filter:blur(8px);opacity:0;visibility:hidden;display:flex;align-items:center;justify-content:center;transition:opacity .3s,visibility .3s}
+.modal.open{opacity:1;visibility:visible}
+.modalbox{overflow:hidden;background:var(--paper);transform:translateY(16px) scale(.98);transition:transform .4s var(--ease)}.modal.open .modalbox{transform:none}
+.modalhead{background:var(--white)}.modalnote{color:var(--muted)}.modaltitle{color:var(--black)}
+.toasts{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:300;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none;width:max-content;max-width:92vw}
+.toast{background:#0B0D0F;color:#F8F8F5;border:1px solid #C9A227;padding:12px 20px;border-radius:980px;font-size:13px;box-shadow:0 12px 40px rgba(0,0,0,.35);animation:tin .4s var(--ease);transition:opacity .3s,transform .3s}
+.toast.off{opacity:0;transform:translateY(10px)}
+@keyframes tin{from{opacity:0;transform:translateY(14px)}}
+/* welcome */
+.welcome{display:none;position:fixed;inset:0;z-index:1000;background:radial-gradient(circle at 50% 40%,#1b1e22,#0B0D0F 65%);flex-direction:column;align-items:center;justify-content:center;color:#F8F8F5;text-align:center;padding:24px;transition:opacity .9s ease,transform .9s var(--ease),visibility .9s}
+html.welcoming .welcome{display:flex}html.welcoming{overflow:hidden}
+.welcome.out{opacity:0;transform:scale(1.05);visibility:hidden}
+.wl-mark{width:min(150px,34vw);opacity:0;clip-path:inset(0 0 100% 0);filter:drop-shadow(0 0 30px rgba(201,162,39,.5));animation:wlogo 1.7s .3s var(--ease) forwards}
+.wl-mark img{width:100%;display:block}
+@keyframes wlogo{to{opacity:1;clip-path:inset(0)}}
+.wl-rule{height:1px;width:0;background:linear-gradient(90deg,transparent,#C9A227,transparent);margin:30px 0 26px;animation:wrule 1.2s 1.6s var(--ease) forwards}
+@keyframes wrule{to{width:min(240px,60vw)}}
+.wl-a{font-size:12px;letter-spacing:.55em;color:#C9A227;opacity:0;animation:wup .9s 2.1s var(--ease) forwards;padding-left:.55em}
+.wl-b{font-family:var(--serif);font-weight:600;font-size:clamp(38px,9vw,96px);letter-spacing:.04em;margin:14px 0 22px;background:linear-gradient(100deg,#8F6E17,#E9C95A 35%,#C9A227 55%,#F6E3A1 75%,#A98414);-webkit-background-clip:text;background-clip:text;color:transparent;clip-path:inset(0 100% 0 0);animation:wreveal 1.3s 2.8s var(--ease) forwards}
+@keyframes wreveal{to{clip-path:inset(-10% -2% -10% -2%)}}
+.wl-c{font-size:clamp(10px,2.4vw,13px);letter-spacing:.4em;color:#cfd1d3;opacity:0;animation:wup 1s 4.1s var(--ease) forwards;padding-left:.4em}
+@keyframes wup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.wl-skip{position:absolute;right:24px;bottom:calc(24px + env(safe-area-inset-bottom));background:transparent;color:#cfd1d3;border:1px solid #3a3e44;border-radius:980px;padding:9px 18px;font-size:12px;cursor:pointer;transition:all .25s}.wl-skip:hover{border-color:#C9A227;color:#C9A227}
+@media(max-width:850px){
+.navtoggle{display:inline-flex}
+.navlinks{position:absolute;top:100%;left:0;right:0;margin-top:8px;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .3s var(--ease);flex-wrap:nowrap}
+.navlinks.open{opacity:1;visibility:visible;transform:none}
+.navlinks a,.navlinks .secret-trigger{padding:14px;font-size:15px;color:var(--black);border-radius:12px}.navlinks a::after{display:none}
+.navlinks .secret-trigger{margin-top:6px;text-align:center}
+.navright{display:flex;gap:8px}.herogrid{padding:56px 0 48px}.hero p{font-size:17px}.themepanel{width:min(300px,calc(100vw - 24px))}}
+@media(min-width:851px){.navright .navtoggle{display:none}}
+.navright{display:flex;gap:8px;align-items:center}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.wl-mark,.wl-a,.wl-b,.wl-c{opacity:1;clip-path:none}.wl-b{clip-path:none}.wl-rule{width:200px}}
 </style>
+<script>
+/* themes + welcome state: runs before paint */
+const THEMES={"Obsidian Gold":[["F8F8F5","FFFFFF","0B0D0F","5F646A","DAD8CF","C9A227","7D5F0D"],["0B0D0F","16191C","F4F3EE","A0A5AB","2C3035","C9A227","E0BB4A"]],
+"Midnight Slate":[["EEF1F6","FFFFFF","101828","52607A","D3DAE6","3B6FD4","2A55AD"],["0E141F","17202E","EAEFF8","9AA8C0","263349","7BA3F2","9DBAF7"]],
+"Forest Archive":[["EFF3EC","FFFFFF","12241A","4F6357","D0DACB","2F7D4F","1F5C3A"],["0C1812","14241B","E8F0EA","9DB3A5","223A2D","5FBF88","86D4A8"]],
+"Burgundy Editorial":[["F7EFEF","FFFFFF","2A0F16","6E5058","E1CFD1","9B2335","7A1828"],["170B0F","24131A","F6ECEE","B99BA2","3D2229","D4566B","E57F90"]],
+"Arctic Minimal":[["F2F6F8","FFFFFF","0F1D24","4F6670","D2DEE3","0E8FA8","0A6E82"],["0A1519","122229","E6F3F7","95B0BA","1F3841","4CC4DD","7ED9EB"]],
+"Warm Sand":[["F3EADB","FBF6EC","2B2116","6C5A44","DDCDB4","B5651D","8A4A12"],["1A140D","271F15","F3EBDD","B3A388","3E3224","E0953F","EDB26A"]]};
+let THEME={t:"Obsidian Gold",m:matchMedia("(prefers-color-scheme:dark)").matches?1:0};
+try{const x=JSON.parse(localStorage.getItem("cursus_theme"));if(x&&THEMES[x.t])THEME=x}catch(_){}
+function applyTheme(animate){const v=THEMES[THEME.t][THEME.m],r=document.documentElement,n=["paper","white","black","muted","line","gold","gold-deep"];
+if(animate){r.classList.add("t");setTimeout(()=>r.classList.remove("t"),600)}
+n.forEach((k,i)=>r.style.setProperty("--"+k,"#"+v[i]));r.style.setProperty("--graphite",THEME.m?"#"+v[1]:"#24272B");r.style.colorScheme=THEME.m?"dark":"light";
+const m=document.querySelector('meta[name=theme-color]');if(m)m.content="#"+v[0];}
+applyTheme(false);
+try{if(!sessionStorage.getItem("cursus_welcomed"))document.documentElement.classList.add("welcoming")}catch(_){}
+</script>
 </head>
 <body>
+<div class="welcome" id="welcome" role="dialog" aria-label="Welcome to CURSUS UPSC"><div class="wl-mark"><img src="assets/logo-icon.png" alt="CURSUS UPSC logo" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='./logo-icon.png'}else{this.parentNode.style.display='none'}"></div><div class="wl-rule"></div><div class="wl-a">WELCOME TO</div><div class="wl-b">CURSUS UPSC</div><div class="wl-c">READ · REVISE · REMEMBER</div><button class="wl-skip" id="wlSkip">Skip intro</button></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
 <div class="topbar"></div>
 <nav><div class="container navin">
-<a class="brand" href="#"><img class="logo" id="navLogo" alt="CURSUS UPSC logo"><div><div class="brandtext">CURSUS UPSC</div><div class="brandsub">READ ¢ REVISE ¢ REMEMBER</div></div></a>
-<div class="navlinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#history-timelines">History Timelines</a><a href="tracker/" target="_blank" rel="noopener">Preparation Tracker</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div>
+<a class="brand" href="#"><img class="logo" id="navLogo" alt="CURSUS UPSC logo"><div><div class="brandtext">CURSUS UPSC</div><div class="brandsub">READ · REVISE · REMEMBER</div></div></a>
+<div class="navlinks" id="navLinks"><a href="#library">Library</a><a href="constitution-companion/">Constitution Companion</a><a href="#history-timelines">History Timelines</a><a href="tracker/" target="_blank" rel="noopener">Preparation Tracker</a><a href="#about">About</a><button class="secret-trigger" id="secretLogin">Publisher Access</button></div><div class="navright"><button class="iconbtn" id="themeBtn" aria-label="Change theme" aria-expanded="false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button><button class="iconbtn navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div><div class="themepanel" id="themePanel" role="dialog" aria-label="Theme"></div>
 </div></nav>
 <main>
 <section class="hero"><div class="container herogrid">
   <div>
     <div class="kicker">Cursus Resource Library</div>
     <h1>Study with a clearer map.</h1>
-    <p>A growing collection of carefully structured resources for UPSC CSE” built to help you understand, revise and remember what matters.</p>
+    <p>A growing collection of carefully structured resources for UPSC CSE — built to help you understand, revise and remember what matters.</p>
     <div class="herostats" id="heroStats"></div>
   </div>
   <div class="herovisual"><img src="assets/logo-icon.png" alt="" aria-hidden="true"></div>
 
   <!-- PUBLISHER PANEL -->
   <div class="publisher-panel" id="publisherPanel" style="grid-column:1/-1">
-    <h3>Publisher Station ” Add New Resource</h3>
+    <h3>Publisher Station — Add New Resource</h3>
     <form id="uploadForm">
       <div class="form-grid">
         <div class="form-group"><label>Resource Title</label><input type="text" id="pTitle" placeholder="e.g. INDIAN ECONOMY MODULE 1" required></div>
@@ -82,7 +197,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
     </form>
     <div class="analytics-panel" style="margin-top:28px;padding-top:22px;border-top:1px solid var(--line)">
       <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap"><div><h3 style="margin:0 0 5px">Resource Analytics</h3><p style="margin:0;color:var(--muted);font-size:13px">Tracking begins after you deploy this update. Views mean preview opens; downloads mean successful download starts.</p></div><button type="button" class="btn" id="refreshAnalyticsBtn">Refresh analytics</button></div>
-      <div id="analyticsStatus" role="status" style="font-size:13px;color:var(--muted);margin:12px 0">Analytics setup required ” run the supplied SQL once in Supabase.</div>
+      <div id="analyticsStatus" role="status" style="font-size:13px;color:var(--muted);margin:12px 0">Analytics setup required — run the supplied SQL once in Supabase.</div>
       <div id="analyticsSummary" class="herostats" style="margin:16px 0"></div>
       <div id="analyticsTableWrap" style="overflow-x:auto"></div>
       <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-top:12px">Unique visitors are approximate browser IDs, not verified people. Repeat visits from another browser/device count separately. Download counts cannot prove that a file was kept or opened.</p>
@@ -94,7 +209,7 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
     <h3>Publisher Login</h3>
     <div class="form-grid">
       <div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com"></div>
-      <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="¢¢¢¢¢¢¢¢"></div>
+      <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password"></div>
     </div>
     <div class="admin-actions">
       <button type="button" class="btn primary" style="padding:12px 24px;" id="loginBtn">Log in</button>
@@ -126,38 +241,63 @@ footer{background:var(--black);color:var(--paper);padding:48px 0}.footerin{displ
   <p class="history-intro">Explore India's past period by period. Open a timeline for an interactive journey through key events, developments and revision connections.</p>
   <div class="history-grid">
     <article class="history-card">
-      <div class="history-period">01 Â· ANCIENT INDIA</div>
+      <div class="history-period">01 · ANCIENT INDIA</div>
       <h3>Ancient India Timeline</h3>
       <p>Explore the foundations, cultures, states and developments of Ancient India.</p>
-      <a href="ancient-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
+      <a href="ancient-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
     </article>
     <article class="history-card">
-      <div class="history-period">02 Â· MEDIEVAL INDIA</div>
+      <div class="history-period">02 · MEDIEVAL INDIA</div>
       <h3>Medieval India Timeline</h3>
       <p>Navigate major dynasties, political transitions, society and cultural developments.</p>
-      <a href="medieval-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
+      <a href="medieval-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
     </article>
     <article class="history-card">
-      <div class="history-period">03 Â· MODERN INDIA</div>
+      <div class="history-period">03 · MODERN INDIA</div>
       <h3>Modern India Timeline</h3>
       <p>Trace colonial expansion, resistance, national movement and the road to independence.</p>
-      <a href="modern-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">â†—</span></a>
+      <a href="modern-india-timeline.html" target="_blank" rel="noopener">Open timeline <span aria-hidden="true">↗</span></a>
     </article>
   </div>
 </section>
 
 <section class="container controls" id="library"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" type="search" placeholder="Search resources, subjects, topics..."></div><div class="filters" id="filters"></div></section>
-<section class="container"><div class="sectionhead"><h2>Resources</h2><div class="count" id="count"></div></div><div class="grid" id="grid"></div><div class="empty" id="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v6h6"/></svg><p>No resources available right now. Check back soon.</p></div></section>
+<section class="container"><div class="sectionhead"><h2>Resources</h2><div class="count" id="count"></div></div><div class="grid" id="grid"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div><div class="empty" id="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v6h6"/></svg><p>No resources available right now. Check back soon.</p></div></section>
 <section class="container" id="about" style="padding:0 0 80px"><div style="border-top:1px solid var(--line);padding-top:25px;max-width:700px"><div class="kicker">ABOUT CURSUS</div><p style="font-size:15px;line-height:1.7;color:var(--muted)">CURSUS UPSC creates focused educational resources designed around clarity, retention and UPSC relevance.</p></div></section>
 </main>
-<footer><div class="container footerin"><div><img src="assets/logo-full-dark.png" alt="CURSUS UPSC" style="height:64px;width:auto;margin-bottom:10px"><div class="footerline">READ - REVISE - REMEMBER</div></div><div class="footernote">CURSUS Resource Library<br>Educational resources for UPSC CSE aspirants.</div></div></footer>
-<div class="modal" id="modal" aria-hidden="true"><div class="modalbox"><div class="modalhead"><div class="modaltitle" id="modalTitle">Preview</div><button class="close" id="close">Ã—</button></div><div class="viewer"><iframe id="pdfFrame" title="PDF preview"></iframe></div><div class="modalnote">If preview fails, use the Download button.</div></div></div>
+<footer><div class="container footerin"><div><img src="assets/logo-full-dark.png" alt="CURSUS UPSC" style="height:64px;width:auto;margin-bottom:10px"><div class="footerline">READ · REVISE · REMEMBER</div></div><div class="footernote">CURSUS Resource Library<br>Educational resources for UPSC CSE aspirants.</div></div></footer>
+<div class="modal" id="modal" aria-hidden="true"><div class="modalbox"><div class="modalhead"><div class="modaltitle" id="modalTitle">Preview</div><button class="close" id="close" aria-label="Close preview">×</button></div><div class="viewer"><iframe id="pdfFrame" title="PDF preview"></iframe></div><div class="modalnote">If preview fails, use the Download button.</div></div></div>
 
+<script>
+/* toasts replace alert() */
+function toast(m,ms=3600){const b=document.getElementById("toasts"),t=document.createElement("div");t.className="toast";t.textContent=m;b.appendChild(t);setTimeout(()=>{t.classList.add("off");setTimeout(()=>t.remove(),350)},ms)}
+window.alert=m=>toast(m,5000);
+/* theme selector */
+(function(){const P=document.getElementById("themePanel"),B=document.getElementById("themeBtn"),NL=document.getElementById("navLinks"),NT=document.getElementById("navToggle");
+function draw(){P.innerHTML='<h4>Theme</h4><div class="themes">'+Object.keys(THEMES).map(k=>{const v=THEMES[k][THEME.m];return `<button class="themeopt" data-t="${k}" aria-pressed="${k===THEME.t}"><span class="sw" style="background:linear-gradient(135deg,#${v[0]} 50%,#${v[5]} 50%)"></span>${k}</button>`}).join("")+'</div><div class="modes"><button data-m="0" aria-pressed="'+(THEME.m==0)+'">Light</button><button data-m="1" aria-pressed="'+(THEME.m==1)+'">Dark</button></div>'}
+function set(){try{localStorage.setItem("cursus_theme",JSON.stringify(THEME))}catch(_){}applyTheme(true);draw()}
+P.addEventListener("click",e=>{const t=e.target.closest("[data-t]"),m=e.target.closest("[data-m]");if(t){THEME.t=t.dataset.t;set()}if(m){THEME.m=+m.dataset.m;set()}});
+B.onclick=e=>{e.stopPropagation();const o=P.classList.toggle("open");B.setAttribute("aria-expanded",o);NL.classList.remove("open")};
+NT.onclick=e=>{e.stopPropagation();const o=NL.classList.toggle("open");NT.setAttribute("aria-expanded",o);P.classList.remove("open")};
+NL.addEventListener("click",e=>{if(e.target.closest("a,button"))NL.classList.remove("open")});
+document.addEventListener("click",e=>{if(!e.composedPath().includes(P)){P.classList.remove("open");B.setAttribute("aria-expanded","false")}if(!NL.contains(e.target))NL.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){P.classList.remove("open");NL.classList.remove("open")}});
+draw();})();
+/* welcome sequence: once per browser session */
+(function(){const W=document.getElementById("welcome"),R=document.documentElement;if(!R.classList.contains("welcoming"))return;
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;let done=false;
+function end(){if(done)return;done=true;try{sessionStorage.setItem("cursus_welcomed","1")}catch(_){}W.classList.add("out");R.classList.remove("welcoming");setTimeout(()=>{W.style.display="none"},950)}
+/* keep overflow locked until fade-out finishes visually */
+const t=setTimeout(end,reduce?1400:5600);
+document.getElementById("wlSkip").onclick=()=>{clearTimeout(t);end()};
+document.addEventListener("keydown",e=>{if(!done&&(e.key==="Escape"||e.key==="Enter")){clearTimeout(t);end()}});
+W.querySelector(".wl-skip").focus({preventScroll:true});})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const LOGO="./logo-icon.png";
+const LOGO="assets/logo-icon.png";
 
-// ==== FILL THESE IN —” see setup guide ====
+// ==== FILL THESE IN — see setup guide ====
 const SUPABASE_URL = "https://pevpegdeqmbrmikixfdu.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_EzBxC_Oru8lXtSDhowSypA_9X54HIb-";
 const BUCKET = "resources";
@@ -308,7 +448,7 @@ document.getElementById("uploadForm").onsubmit = async (e) => {
   const file = document.getElementById("pFile").files[0];
   if(!file){ alert("Choose a PDF file first."); return; }
 
-  btn.disabled = true; btn.textContent = "Uploadingâ€¦";
+  btn.disabled = true; btn.textContent = "Uploading…";
   try {
     const path = `${Date.now()}_${file.name.replace(/[^a-zA-Z0-9._-]/g,"_")}`;
     const {error: upErr} = await sb.storage.from(BUCKET).upload(path, file);
@@ -350,7 +490,7 @@ document.getElementById("clearAllBtn").onclick = async () => {
 async function downloadFile(url, filename, triggerEl){
   const label = triggerEl ? triggerEl.querySelector(".dl-label") : null;
   const originalText = label ? label.textContent : null;
-  if(label) label.textContent = "Preparingâ€¦";
+  if(label) label.textContent = "Preparing…";
   try{
     const res = await fetch(url);
     if(!res.ok) throw new Error("File not reachable");
@@ -377,7 +517,7 @@ async function downloadFile(url, filename, triggerEl){
 async function loadAnalytics(){
   const status=document.getElementById("analyticsStatus"),summary=document.getElementById("analyticsSummary"),wrap=document.getElementById("analyticsTableWrap");
   if(!session){status.textContent="Log in with the publisher account to view analytics.";summary.innerHTML="";wrap.innerHTML="";return;}
-  status.textContent="Loading analyticsâ€¦";
+  status.textContent="Loading analytics…";
   try{
     const {data,error}=await sb.from("resource_events").select("event_type,resource_id,resource_title,visitor_id,created_at").order("created_at",{ascending:false}).limit(20000);
     if(error) throw error;
@@ -388,7 +528,7 @@ async function loadAnalytics(){
     const byResource=new Map();for(const e of events){const k=String(e.resource_id);if(!byResource.has(k))byResource.set(k,{title:e.resource_title||"Untitled resource",views:0,downloads:0,last:e.created_at});const x=byResource.get(k);if(e.event_type==="view")x.views++;if(e.event_type==="download")x.downloads++;if(new Date(e.created_at)>new Date(x.last))x.last=e.created_at;}
     const rows=[...byResource.values()].sort((a,b)=>(b.views+b.downloads)-(a.views+a.downloads));
     wrap.innerHTML=rows.length?`<table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">Resource</th><th style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">Views</th><th style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">Downloads</th><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">Last activity</th></tr></thead><tbody>${rows.map(r=>`<tr><td style="padding:10px;border-bottom:1px solid var(--line)">${esc(r.title)}</td><td style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">${r.views}</td><td style="text-align:right;padding:10px;border-bottom:1px solid var(--line)">${r.downloads}</td><td style="padding:10px;border-bottom:1px solid var(--line)">${new Date(r.last).toLocaleDateString()}</td></tr>`).join("")}</tbody></table>`:`<p style="color:var(--muted);font-size:13px">No tracked activity yet. New preview opens and successful download starts will appear here.</p>`;
-    status.textContent=`Analytics loaded â€¢ ${events.length.toLocaleString()} events${events.length===20000?" (latest 20,000 shown)":""}.`;
+    status.textContent=`Analytics loaded • ${events.length.toLocaleString()} events${events.length===20000?" (latest 20,000 shown)":""}.`;
   }catch(err){status.textContent="Analytics could not load. Run the companion SQL in Supabase and check its RLS policies. Details: "+(err.message||err);summary.innerHTML="";wrap.innerHTML="";}
 }
 document.getElementById("refreshAnalyticsBtn").onclick=loadAnalytics;
@@ -397,7 +537,7 @@ const modal=document.getElementById("modal"),frame=document.getElementById("pdfF
 function preview(file){const r=resources.find(x=>x.file===file);if(r) trackResourceEvent("view",r);modalTitle.textContent=r?r.title:"PDF Preview";frame.src=file+"#view=FitH";modal.classList.add("open");modal.setAttribute("aria-hidden","false")}
 function closeModal(){frame.src="";modal.classList.remove("open");modal.setAttribute("aria-hidden","true")}
 document.getElementById("close").onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});search.addEventListener("input",render);
-document.getElementById("navLogo").src=LOGO;
+{const nl=document.getElementById("navLogo");nl.onerror=()=>{nl.onerror=null;nl.src="./logo-icon.png"};nl.src=LOGO;}
 sb.auth.onAuthStateChange(()=>refreshSession());
 refreshSession();
 loadResources();
